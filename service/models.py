@@ -25,6 +25,8 @@ def init_db(app):
 ######################################################################
 #  P E R S I S T E N T   B A S E   M O D E L
 ######################################################################
+
+
 class PersistentBase:
     """Base class added persistent methods"""
 
@@ -79,6 +81,8 @@ class PersistentBase:
 ######################################################################
 #  A C C O U N T   M O D E L
 ######################################################################
+
+
 class Account(db.Model, PersistentBase):
     """
     Class that represents an Account
