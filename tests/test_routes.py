@@ -59,7 +59,6 @@ class TestAccountService(TestCase):
     #  H E L P E R   M E T H O D S
     ######################################################################
 
-  
     def _create_accounts(self, count):
         """Factory method to create accounts in bulk"""
         accounts = []
@@ -80,7 +79,6 @@ class TestAccountService(TestCase):
     #  A C C O U N T   T E S T   C A S E S
     ######################################################################
 
-  
     def test_index(self):
         """It should get 200_OK from the Home Page"""
         response = self.client.get("/")
@@ -178,7 +176,6 @@ class TestAccountService(TestCase):
         """It should not allow an illegal method call"""
         resp = self.client.delete(BASE_URL)
         self.assertEqual(resp.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-
 
     def test_security_headers(self):
         """It should return security headers"""
